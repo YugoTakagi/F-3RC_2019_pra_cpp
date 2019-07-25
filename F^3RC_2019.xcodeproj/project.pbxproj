@@ -37,7 +37,6 @@
 		2AF854CA22E98E140089C1A0 /* motor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = motor.cpp; sourceTree = "<group>"; };
 		2AF854CB22E98E140089C1A0 /* LowlayerHandel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LowlayerHandel.hpp; sourceTree = "<group>"; };
 		2AF854CC22E98E140089C1A0 /* numCpp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = numCpp.hpp; sourceTree = "<group>"; };
-		2AF854CD22E98E140089C1A0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2AF854CE22E98E140089C1A0 /* curiosity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = curiosity.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +79,6 @@
 				2AF854CC22E98E140089C1A0 /* numCpp.hpp */,
 				2AF854C522E98E130089C1A0 /* pidController.cpp */,
 				2AF854C722E98E130089C1A0 /* pidController.hpp */,
-				2AF854CD22E98E140089C1A0 /* README.md */,
 				2AF854AD22E98D100089C1A0 /* main.cpp */,
 			);
 			path = "F^3RC_2019";
