@@ -22,6 +22,18 @@ template<class T, size_t N>
 size_t arraySize(const T (&array)[N]) {
     return N;
 };
+
+template <typename T>
+T dot(T *a,T *b){
+    T c[arraySize(&a)];
+    for (int i=0; i<arraySize(&a); i++) {
+        for (int j=0; j<arraySize(*&a); j++) {
+            c[i]=a[i][j]*b[j];
+        }
+    }
+    
+    return *c;
+}
 class NumCpp
 {
 private:

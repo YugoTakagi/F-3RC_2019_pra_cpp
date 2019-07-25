@@ -28,10 +28,14 @@ private:
     PidController __pidTheta;
     
     Datas State;
-    Datas Adjustment;
+    float Adjustment[3];
     Datas Reference;
     float velocity[3];
     float jacobian[3][3]= {{11,12,13},{21,22,23},{31,32,33}};;
+    
+    const int __x=0;
+    const int __y=1;
+    const int __theta=2;
 public:
     Curiosity(LowlayerHandelTypedef *hlow, float dt);
     void inverse_kinematics_model();

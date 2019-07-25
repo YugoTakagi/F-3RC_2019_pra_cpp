@@ -25,10 +25,9 @@ void Curiosity::using_model(Datas State, Datas Reference){
     __pidX.set_state(State.x);
     __pidX.set_state(State.y);
     __pidX.set_state(State.theta);
-    Adjustment.x = __pidX.use_pidController(Reference.x);
-    Adjustment.y = __pidY.use_pidController(Reference.y);
-    Adjustment.theta = __pidTheta.use_pidController(Reference.theta);
-    
+    Adjustment[__x] = __pidX.use_pidController(Reference.x);
+    Adjustment[__y] = __pidY.use_pidController(Reference.y);
+    Adjustment[__theta] = __pidTheta.use_pidController(Reference.theta);
     
     inverse_kinematics_model();
 //    motor
@@ -39,9 +38,7 @@ void Curiosity::using_model(Datas State, Datas Reference){
 void Curiosity::inverse_kinematics_model(){
 //    ここをnumCppに入れたい
     for (int i=0; i<arraySize(jacobian); i++) {
-        for (int j=0; j<arraySize(*jacobian); j++) {
-            velocity[i]=Adjustment.x*jacobian[i][j]*nc.rotVel() +Adjustment.y*jacobian[i][j]*nc.rotVel() +Adjustment.theta*jacobian[i][j];
-        }
+            velocity[i]=Adjustment[__x]*jacobian[i][__x]*nc.rotVel() +Adjustment[__y]*jacobian[i][__y]*nc.rotVel() +Adjustment[__theta]*jacobian[i][__theta];
     }
 }
 
